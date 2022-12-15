@@ -4,15 +4,14 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    width: 589px;
-    height: 421px;
 }
 
 /* Mobile */
 .mobile {
     width: 215px;
     height: 421px;
+
+    padding-right: 16px;
 }
 
 .mobile-preview {

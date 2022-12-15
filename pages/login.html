@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="../styles/login.css">
         <link rel="stylesheet" href="../styles/styles.css">
+        <script src="../scripts/forms.js"></script> 
         <title>Se connecter</title>
     </head>
 
@@ -31,23 +32,26 @@
                     <img class="login-box-logo" src="../img/logo.png" alt="">
                     <!-- Forms -->
                     <form class="login-box-forms">
+                        <!-- Field -->
                         <div class="inputbox">
-                            <input type="text" required="required">
-                            <span>Nom d'utilisateur ou e-mail</span>
+                            <input type="text" id="username" required>
+                            <span>Nom d'utilisateur</span>
                         </div>
+                        <!-- Field -->
                         <div class="inputbox">
-                            <input type="password" required="required">
+                            <input  type="password" id="password" required>
                             <span>Mot de passe</span>
                         </div>
-                        <button class="button">Se connecter</button>
+                        <!-- Button -->
+                        <input value="Se connecter" class="button" onclick="submitLoginCredentials()">
                     </form>
                     <!-- Link -->
-                    <a class="link" href="file:///C:/Users/ugo/Documents/Camagru/pages/sendResetPass.html">Mot de passe oublié ?</a>
+                    <a class="link" href="./sendResetPass.html">Mot de passe oublié ?</a>
                 </div>
                 <!-- Link to register -->
                 <div class="linkTo">
                     <span>Vous n'avez pas de compte ?</span>
-                    <a class="link" href="file:///C:/Users/ugo/Documents/Camagru/pages/register.html">Inscrivez-vous</a>
+                    <a class="link" href="./register.html">Inscrivez-vous</a>
                 </div>
             </div>
         </div>
