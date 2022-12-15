@@ -6,7 +6,7 @@ function checkRegisterForm(){
         ret = false;
     }
     if (email.value.length === 0){
-        console.log('Please enter a username');
+        console.log('Please enter an email');
         ret = false;
     }
     if (password.value.length === 0){

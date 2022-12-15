@@ -8,10 +8,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="../styles/register.css">
-        <link rel="stylesheet" href="../styles/styles.css">
-        <script src="../scripts/register.js"></script> 
-        <title>S'inscrire</title>
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="stylesheet" href="../css/styles.css">
+        <script src="../js/login.js"></script> 
+        <title>Se connecter</title>
     </head>
 
     <!-- Content of the page -->
@@ -25,13 +25,13 @@
             </div>
 
             <!-- Login -->
-            <div class="register">
+            <div class="login">
                 <!-- Login forms -->
-                <div class="register-box">
+                <div class="login-box">
                     <!-- Logo -->
-                    <img class="register-box-logo" src="../img/logo.png" alt="">
+                    <img class="login-box-logo" src="../img/logo.png" alt="">
                     <!-- Forms -->
-                    <form class="register-box-forms">
+                    <form class="login-box-forms">
                         <!-- Field -->
                         <div class="inputbox">
                             <input type="text" id="username" required>
@@ -39,23 +39,19 @@
                         </div>
                         <!-- Field -->
                         <div class="inputbox">
-                            <input type="text" id="email" required>
-                            <span>E-mail</span>
-                        </div>
-                        <!-- Field -->
-                        <div class="inputbox">
-                            <input type="password" id="password" required>
+                            <input  type="password" id="password" required>
                             <span>Mot de passe</span>
                         </div>
-                        <p>En vous inscrivant, vous acceptez que nous conservions votre e-mail dans le cadre du bon fonctionnement du site.</p>
                         <!-- Button -->
-                        <button class="button" onclick="submitRegisterForm()">Se connecter</button>
+                        <button class="button" onclick="submitLoginForm()">Se connecter</button>
                     </form>
+                    <!-- Link -->
+                    <a class="link" href="./sendResetPass.html">Mot de passe oublié ?</a>
                 </div>
                 <!-- Link to register -->
                 <div class="linkTo">
-                    <span>Vous avez deja un compte ?</span>
-                    <a class="link" href="./login.html">Connectez-vous</a>
+                    <span>Vous n'avez pas de compte ?</span>
+                    <a class="link" href="./register.html">Inscrivez-vous</a>
                 </div>
             </div>
         </div>
