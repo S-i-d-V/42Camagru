@@ -33,9 +33,9 @@ html, body{
 .inputbox input {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 10px;
 
-    width: 268px;
+    width: 248px;
     transition: 0.6s;
 
     outline: none;
