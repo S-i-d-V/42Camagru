@@ -1,0 +1,63 @@
+/* MAIN COMPONENT */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 350px;
+    height: 470px;
+}
+
+/* Login */
+.reset {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 350px;
+    height: 470px;
+}
+
+.reset-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: 395px;
+
+    border-radius: 3px;
+    border: 1px solid #DBDBFF;
+}
+
+.reset-box-logo {
+    width: 96px;
+    height: 96px;
+}
+
+.reset-box-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.reset-box p {
+    width: 268px;
+
+    text-align: center;
+    font-size: 14px;
+    color: #8E8E8E;
+}
+
+/* Forms */
+.reset-box-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 98px;
+    width: 288px;
+}

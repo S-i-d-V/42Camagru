@@ -1,0 +1,69 @@
+/* MAIN COMPONENT */
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 613px;
+    height: 421px;
+}
+
+/* Mobile */
+.mobile {
+    width: 239px;
+    height: 467px;
+}
+
+.mobile-preview {
+    width: 100%;
+    height: 100%;
+}
+
+/* Login */
+.register {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 350px;
+    height: 467px;
+}
+
+.register-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 350px;
+    height: 395px;
+
+    border-radius: 3px;
+    border: 1px solid #DBDBFF;
+}
+
+.register-box-logo {
+    width: 146px;
+    height: 51px;
+}
+
+/* Forms */
+.register-box-forms {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 252px;
+    width: 288px;
+}
+
+.register-box-forms p {
+    width: 268px;
+
+    text-align: center;
+    font-size: 14px;
+    color: #8E8E8E;
+}
