@@ -1,0 +1,28 @@
+version: '3.5'
+
+services:
+    web-nginx:
+        image: nginx:stable-alpine
+        container_name: web-nginx
+        volumes:
+            - "./srcs/www:/usr/share/nginx/html:ro"
+            - "./srcs/log:/var/log/nginx"
+            - "./srcs/nginx.conf:/etc/nginx/nginx.conf:ro"
+        ports:
+            - "127.0.0.1:80:80"
+
+    web-php:
+        build: ./srcs/.build-php
+        container_name: web-php
+        volumes:
+            - "./srcs/www:/script:ro"
+
+    web-pgsql:
+        image: postgres:alpine
+        container_name: web-pgsql
+        volumes:
+            - "./srcs/data:/var/lib/postgresql/data"
+        environment:
+            POSTGRES_USER: foobar
+            POSTGRES_PASSWORD: foobar
+            POSTGRES_DB: foobar

@@ -1,0 +1,41 @@
+.SILENT:
+DOCKER_PS= $(shell docker ps -a -q)
+DOCKER_IMAGES= $(shell docker images -q)
+DOCKER_VOLUME_LS= $(shell docker volume ls -q)
+
+all: build
+
+build:
+	docker-compose up --build 
+	@echo "`tput  setaf 2` Server built and up"
+
+up:
+	docker-compose up
+	@echo "`tput  setaf 2` Server up"
+
+down:
+	docker-compose down
+	@echo "`tput  setaf 2` Server down"
+
+start:
+	docker-compose start
+	@echo "`tput  setaf 2` Server start"
+
+stop:
+	docker-compose stop
+	@echo "`tput  setaf 2` Server stop"
+
+clean:
+	docker-compose down
+ifneq ($(strip $(DOCKER_PS)),)
+	docker rm -f $(DOCKER_PS)
+endif
+ifneq ($(strip $(DOCKER_IMAGES)),)
+	docker rmi -f $(DOCKER_IMAGES)
+endif
+ifneq ($(strip $(DOCKER_VOLUME_LS)),)
+	docker volume rm -f $(DOCKER_VOLUME_LS)
+endif
+
+re: clean all
+
