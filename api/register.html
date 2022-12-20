@@ -33,17 +33,17 @@
                     <!-- Forms -->
                     <form class="register-box-forms">
                         <!-- Field -->
-                        <div class="inputbox" onkeyup="success()">
+                        <div class="inputbox" onkeyup="registerClientValidation()" id="username-inputbox">
                             <input type="text" id="username" required>
                             <span>Nom d'utilisateur</span>
                         </div>
                         <!-- Field -->
-                        <div class="inputbox" onkeyup="success()" id="email-inputbox">
+                        <div class="inputbox" onkeyup="registerClientValidation()" id="email-inputbox">
                             <input type="text" id="email" required>
                             <span>E-mail</span>
                         </div>
                         <!-- Field -->
-                        <div class="inputbox" onkeyup="success()" id="password-inputbox">
+                        <div class="inputbox" onkeyup="registerClientValidation()" id="password-inputbox">
                             <input type="password" id="password" required>
                             <span>Mot de passe</span>
                         </div>

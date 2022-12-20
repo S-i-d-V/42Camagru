@@ -2,9 +2,12 @@
 
 //Import Express
 const express = require('express');
+//Import SHA512
+const sha512 = require('js-sha512');
 
 //Create Express app
 const app = express();
+//Json parser for body request
 app.use(express.json());
 
 //Import logic of pages
@@ -26,11 +29,27 @@ app.get('/register', async(req, res) => {
 });
 
 app.post('/register', async(req, res) => {
-    console.log('Requete POST /register recu')
+    //Display request
+    console.log('POST /register:', req.body);
 
-    console.log('Got body:', req.body);
+    //Check if username is already taken
+    if (req.body.username == "") {
+        res.send("This username is already taken");
+        return;
+    }
+    //Check if email is already used
+    if (req.body.email == "") {
+        res.send("This email is already used");
+        return;
+    }
 
-    res.send('Requete POST /register recu');
+    //Then, i hash the password
+    req.body.password = sha512(req.body.password);
+
+    //Then i can finally add my user to the DB
+
+    //I send the success response
+    res.send('Done');
 });
 
 //Listen to get method on login path
