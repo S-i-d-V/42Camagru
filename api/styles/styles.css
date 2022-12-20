@@ -100,7 +100,11 @@ html, body{
 .button:hover {
     background-color: #3187c8;
     transition: 0.3s;
+}
 
+.button:disabled {
+    background-color: #3981b8b6;
+    transition: 0.3s;
 }
 
 /* Links */

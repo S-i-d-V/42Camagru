@@ -2,23 +2,54 @@
 
 //Import Express
 const express = require('express');
+
 //Create Express app
 const app = express();
+app.use(express.json());
 
-//Import logic of index
-const generateIndex = require('./pages/index-get.js');
+//Import logic of pages
+const generateLogin = require('./pages/login-get.js');
+const generateRegister = require('./pages/register-get.js');
+const generateSendResetPass = require('./pages/sendResetPass-get.js');
+
 
 //Listen to get method on rooth path
 app.get('/', async(req, res) => {
-    const indexHtml = await generateIndex();
-
-    res.send(indexHtml);
+    res.redirect('/register');
 });
 
+//Listen to get method on register path
+app.get('/register', async(req, res) => {
+    const html = await generateRegister();
+
+    res.send(html);
+});
+
+app.post('/register', async(req, res) => {
+    console.log('Requete POST /register recu')
+
+    console.log('Got body:', req.body);
+
+    res.send('Requete POST /register recu');
+});
+
+//Listen to get method on login path
+app.get('/login', async(req, res) => {
+    const html = await generateLogin();
+
+    res.send(html);
+});
+
+//Listen to get method on sendResetPath path
+app.get('/sendResetPass', async(req, res) => {
+    const html = await generateSendResetPass();
+
+    res.send(html);
+});
+
+//Serve static content (Will be served by Nginx in the future);
 app.use('/imgs', express.static('/Users/ugotheveny/Documents/42Camagru/api/imgs'));
-
 app.use('/styles', express.static('/Users/ugotheveny/Documents/42Camagru/api/styles'));
-
 app.use('/scripts', express.static('/Users/ugotheveny/Documents/42Camagru/api/scripts'));
 
 //Start the server & listen to the port 6300 

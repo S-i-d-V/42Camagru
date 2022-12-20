@@ -33,29 +33,29 @@
                     <!-- Forms -->
                     <form class="register-box-forms">
                         <!-- Field -->
-                        <div class="inputbox">
+                        <div class="inputbox" onkeyup="success()">
                             <input type="text" id="username" required>
                             <span>Nom d'utilisateur</span>
                         </div>
                         <!-- Field -->
-                        <div class="inputbox">
+                        <div class="inputbox" onkeyup="success()" id="email-inputbox">
                             <input type="text" id="email" required>
                             <span>E-mail</span>
                         </div>
                         <!-- Field -->
-                        <div class="inputbox">
+                        <div class="inputbox" onkeyup="success()" id="password-inputbox">
                             <input type="password" id="password" required>
                             <span>Mot de passe</span>
                         </div>
                         <p>En vous inscrivant, vous acceptez que nous conservions votre e-mail dans le cadre du bon fonctionnement du site.</p>
                         <!-- Button -->
-                        <button class="button" onclick="submitRegisterForm()">S'inscrire</button>
+                        <input class="button" onclick="submitRegisterForm()" id="register-button" disabled value="S'inscrire"></input>
                     </form>
                 </div>
                 <!-- Link to register -->
                 <div class="linkTo">
                     <span>Vous avez deja un compte ?</span>
-                    <a class="link" href="./login.html">Connectez-vous</a>
+                    <a class="link" href="/login">Connectez-vous</a>
                 </div>
             </div>
         </div>
