@@ -6,15 +6,13 @@ services:
       context: ./backend
       dockerfile: Dockerfile
       target: development
-    image: Camagru/backend
+    image: camagru/backend
     container_name: backend
     volumes:
       - ./backend/:/camagru/backend:ro
     networks:
       camagru_network:
         aliases: [camagru.backend]
-    depends_on:
-      postgres: { condition: service_healthy }
     ports:
       - 3000:3000
     restart: on-failure
@@ -24,7 +22,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       target: development
-    image: Camagru/frontend
+    image: camagru/frontend
     container_name: frontend
     volumes:
       - ./frontend/:/camagru/frontend:ro

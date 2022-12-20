@@ -8,6 +8,6 @@ RUN npm clean-install
 
 COPY . .
 
-RUN node app.js
+RUN node app.js &
 
 EXPOSE 3000
