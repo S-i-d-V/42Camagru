@@ -57,7 +57,7 @@ function submitRegisterForm(){
     }
 
     //Submit
-     fetch('http://localhost:6300/register', {
+     fetch('http://localhost:3000/register', {
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
