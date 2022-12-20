@@ -61,7 +61,8 @@ function submitRegisterForm(){
         method: 'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            'Origin': 'http://localhost:6300'
         },
         body: JSON.stringify({username: username.value, email: email.value, password: password.value})
     }).then(result => {

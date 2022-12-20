@@ -2,6 +2,7 @@
 
 //Import Express
 const express = require('express');
+const cors = require('cors');
 //Import SHA512
 const sha512 = require('js-sha512');
 
@@ -9,6 +10,8 @@ const sha512 = require('js-sha512');
 const app = express();
 //Json parser for body request
 app.use(express.json());
+//Enable all CORS request (need to only enable front)
+app.use(cors());
 
 app.post('/register', async(req, res) => {
     //Display request
