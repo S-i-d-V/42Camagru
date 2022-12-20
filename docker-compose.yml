@@ -6,10 +6,11 @@ services:
       context: ./backend
       dockerfile: Dockerfile
       target: development
-    image: camagru/backend
+    command: node app.js
+    image: camagru-backend
     container_name: backend
     volumes:
-      - ./backend/:/camagru/backend:ro
+      - ./backend/:/camagru-backend:ro
     networks:
       camagru_network:
         aliases: [camagru.backend]
@@ -22,12 +23,13 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       target: development
-    image: camagru/frontend
+    command: node app.js
+    image: camagru-frontend
     container_name: frontend
     volumes:
-      - ./frontend/:/camagru/frontend:ro
+      - ./frontend/:/camagru-frontend:ro
     ports:
-      - 4200:4200
+      - 6300:6300
     networks:
       camagru_network:
         aliases: [camagru.frontend]
