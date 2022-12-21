@@ -41,9 +41,9 @@ app.get('/sendResetPass', async(req, res) => {
 });
 
 //Serve static content (Will be served by Nginx in the future);
-app.use('/imgs', express.static('/Users/ugotheveny/Documents/42Camagru/frontend/imgs'));
-app.use('/styles', express.static('/Users/ugotheveny/Documents/42Camagru/frontend/styles'));
-app.use('/scripts', express.static('/Users/ugotheveny/Documents/42Camagru/frontend/scripts'));
+app.use('/imgs', express.static('imgs'));
+app.use('/styles', express.static('styles'));
+app.use('/scripts', express.static('scripts'));
 
 //Start the server & listen to the port 6300 
 app.listen(6300, () => {
